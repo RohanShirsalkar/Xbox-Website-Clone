@@ -1,0 +1,29 @@
+.navbar-component {
+
+    padding: 15px 5%;
+    // border-bottom: 1px solid gray;
+
+    .brand-title {
+        color: var(--green-color);
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    nav li {
+        margin-right: 15px;
+        font-size: 13px;
+    }
+
+    nav li a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    nav li a:hover {
+        color: var(--green-color);
+    }
+
+}

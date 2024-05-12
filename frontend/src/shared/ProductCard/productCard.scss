@@ -1,0 +1,36 @@
+#productCard {
+
+    // width: 100%;
+    picture {
+        // width: 100%;
+    }
+
+    .subheading {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 24px;
+    }
+
+    .btn-group a {
+        text-decoration: none;
+        color: var(--green-color);
+        font-weight: 700;
+    }
+
+    .btn-group a::after {
+        // font-size: 24px;
+        // margin-top: 3px;
+        margin-left: 3px;
+        display: inline-block;
+        position: relative;
+        right: 0;
+        content: ">";
+        vertical-align: top;
+    }
+}
+
+@media (max-width: 480px) {
+    #productCard {
+        margin-bottom: 20px;
+    }
+}

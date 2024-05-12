@@ -1,0 +1,95 @@
+#signin-page-component {
+
+    .overlay {
+        width: 100%;
+        min-height: 100vh;
+        background-color: var(--green-color);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .form-box {
+        max-width: 350px;
+        width: calc(100% - 40px);
+        padding: 44px;
+        background-color: white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            margin-bottom: 1.2rem;
+            padding: 6px 0px;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, .6);
+            font-size: 1rem;
+
+            &::placeholder {
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+
+        span {
+            font-size: 13px;
+            font-weight: 300;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .next-btn {
+            background-color: #0067b8;
+            color: white;
+            border: none;
+            min-width: 100px;
+            min-height: 32px;
+            padding: 4px 12px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .overlay {
+            // grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .overlay {
+            justify-content: flex-start;
+            padding-top: 2rem;
+        }
+
+        .form-box {
+            max-width: 70%;
+        }
+
+    }
+
+}

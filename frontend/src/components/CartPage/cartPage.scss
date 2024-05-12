@@ -1,0 +1,218 @@
+#cartpage-component {
+
+    min-height: 90vh;
+    display: flex;
+
+
+    .left-section {
+        padding: 10px 5%;
+        width: 70%;
+    }
+
+    .heading {
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid gray;
+
+        h1 {
+            font-weight: 500;
+        }
+    }
+
+    .shipping-details-from {
+
+        margin-top: 10px;
+
+        & label {
+            margin-bottom: 5px;
+        }
+
+        & input {
+            padding: 8px 10px;
+            border: 2px solid #585858;
+            width: 300px;
+        }
+
+        .btn-group {
+            margin-bottom: 20px;
+
+            & button {
+                padding: 8px 10px;
+                min-width: 120px;
+                border: none;
+                font-size: 15px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            & button[name="save"] {
+                background-color: greenyellow;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .payment-section {
+
+        h2 {
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+
+            border: 1px solid gray;
+
+            span {
+                font-size: 20px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .cart-tabs-container {
+        display: flex;
+
+        // justify-content: stretch;
+        .active {
+            background-color: var(--green-color);
+            color: white;
+        }
+
+        a {
+            min-width: 100px;
+            text-align: center;
+            font-weight: 800;
+            padding: 5px 20px;
+            text-decoration: none;
+            border: 1px solid gray;
+            color: black;
+        }
+    }
+
+    .cart {
+
+        // border: 1px solid gray;
+        // padding-left: 2%;
+
+        h2 {
+            font-weight: 500;
+        }
+    }
+
+    .item-card {
+        display: flex;
+        align-items: center;
+        padding: 20px 10px;
+        border-bottom: 1px solid rgb(170, 170, 170);
+
+        .product-name {
+            h3 {
+                text-decoration: underline;
+                font-weight: 500;
+            }
+
+        }
+
+        .description-section {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .price {
+                h3 {
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+
+    .right-section {
+        // padding: 10px;
+        max-width: 30%;
+        padding: 10px 5%;
+        padding-left: 0;
+
+        .gray-box {
+            margin-top: 4rem;
+            padding: 20px 20px;
+            margin-right: 10px;
+            background-color: #f1f1f1;
+            width: 300px;
+
+            .summary {
+                border-bottom: 1px solid gray;
+                margin-bottom: 1rem;
+
+
+            }
+
+            .row-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+
+            .total {
+                .checkout-btn {
+                    width: 100%;
+                    padding: 10px 20px;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    background-color: var(--green-color);
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgb(0, 97, 0);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    #cartpage-component {
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: smaller;
+
+        .left-section {
+            width: unset;
+
+            .item-card {
+                padding: 10px;
+
+                .description-section {
+                    flex-direction: column;
+                }
+
+            }
+        }
+
+        .right-section {
+            max-width: unset;
+            padding: unset;
+
+            .gray-box {
+                margin-right: unset;
+                width: unset;
+                border-bottom: 1px solid gray;
+            }
+        }
+    }
+}
